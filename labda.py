@@ -1,4 +1,4 @@
-//Tutoe kalmar patrik
+//Tutor kalmar patrik
 from time import sleep
 import os
 
