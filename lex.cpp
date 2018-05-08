@@ -1,4 +1,4 @@
-//tutor Kalamar Patrik
+//tutor Kalmar patrik
 #include <iostream>
 #include <fstream>
 #include <ctype.h>
@@ -17,8 +17,9 @@ int main(){
 	int szam = 0;
 	int space = 0;
 	int spec = 0;
+int szo = 0;
 
-	while(fin.get(ch)){
+	while ((ch = getchar()) != EOF) {
  		if(ch == ' ' || ch == '\t'){
 			space++;
 		}	
@@ -33,8 +34,16 @@ int main(){
 		}
 		if(ispunct(ch)){
 			spec++;
-		}	
+}
+if (ch == ' ' || ch == '\t' || ch == '\n') {
+szo++;
 	}
-	fin.close();
-	cout << "Szam: " << szam << "\nBetu: " << betu << "\nSpace: " << space << "\nSor: " << sor << "\nSpec: " << spec << endl;
+    }
+
+    if (ch != '\n') {
+        sor++;
+    }
+
+    printf("Sor, Szó, Betű, Szóköz, Szám, Egyéb írásjel\n");
+    printf(" %2d %4d %5d %5d %5d %9d\n", sor, szo, betu, space, szam, spec);
 }
