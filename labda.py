@@ -1,3 +1,4 @@
+//Tutoe kalmar patrik
 from time import sleep
 import os
 
