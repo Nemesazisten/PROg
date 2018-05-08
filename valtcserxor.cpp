@@ -1,4 +1,4 @@
-//kalmar patrik
+//tutoriálom kalmar patrik
 #include <iostream>
 
 using namespace std;
