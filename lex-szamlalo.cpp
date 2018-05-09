@@ -7,29 +7,22 @@ using namespace std;
 int main()
 {
 
-int szo=0;
-int sor=0;
-int betu=0;
-int szam=0;
-int spec=0;
+int szo=0, sor=0, betu=0, szam=0, spec=0, sum;
 
 ifstream in("szoveg.txt");
 char current;
-while(in.get(current))
-}
-
-if(current == ' ' ||current=='\n'||current=='\t')
-szo++;
+while((current= getchar()) != EOF) {
+if(current==' '||current=='\n'||current=='\t')
+   szo++;
 if(current=='\n')
-sor++;
+   sor++;
 if(isalpha(current))
-szo++;
+   szo++;
 if(isdigit(current))
-szam++;
+   szam++;
 if(ispunct(current))
-spec++;
+   spec++;
 }
 sum=betu+szam,spec;
-cout<<sor<<" sor" <<szo<<" szo" <<betu<<" betu" <<szam<<" szam" <<spec<<" speciális karakter";
+cout<<sor<<" sor\n" <<szo<<" szo\n" <<betu<<" betu\n" <<szam<<" szam\n" <<spec<<" speciális karakter\n";
 } 
-
