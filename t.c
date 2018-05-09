@@ -1,6 +1,6 @@
 #define MAX_TITKOS 4096
 #define OLVASAS_BUFFER 256
-#define KULCS_MERET 5
+#define KULCS_MERET 6
 #define _GNU_SOURCE
 
 #include <stdio.h>
@@ -87,7 +87,7 @@ main (void)
       for (int ki = 'A'; ki <= 'Z'; ++ki)
 	for (int li = 'A'; li <= 'Z'; ++li)
 	  for (int mi = 'A'; mi <= 'Z'; ++mi)
-	   // for (int ni = '0'; ni <= '9'; ++ni)
+	    for (int ni = '0'; ni <= '9'; ++ni)
 	  //    for (int oi = '0'; oi <= '9'; ++oi)
 	//	for (int pi = '0'; pi <= '9'; ++pi)
 		  {
@@ -96,14 +96,14 @@ main (void)
 		    kulcs[2] = ki;
 		    kulcs[3] = li;
 		    kulcs[4] = mi;
-		//    kulcs[5] = ni;
+		    kulcs[5] = ni;
 		    //kulcs[6] = oi;
 		  //  kulcs[7] = pi;
 
 		    if (exor_tores (kulcs, KULCS_MERET, titkos, p - titkos))
 		      printf
 			("Kulcs: [%c%c%c%c%c]\nTiszta szoveg: [%s]\n",
-			ii,ji, ki, li,mi, titkos);
+			ii,ji, ki, li,mi,ni, titkos);
 
 		    // ujra EXOR-ozunk, igy nem kell egy masodik buffer  
 		    exor (kulcs, KULCS_MERET, titkos, p - titkos);
